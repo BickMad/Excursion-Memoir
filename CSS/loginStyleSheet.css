@@ -1,0 +1,188 @@
+.navBar{
+    background: #F1B5B8;
+    color: black;
+    height: 150px;
+    padding-left: 18px;
+    border-radius: 5px;
+    border: 5px solid #000000;
+}
+
+.navBar ul, .navBar li{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navBar ul{
+    width: 100%;
+}
+.navBar li{
+    border: solid 2px;
+    margin: 3px;
+    float:right;
+    display: inline;
+    position: relative;
+    border-radius: 10px;
+}
+.navBar a{
+    float: right;
+    display: block;
+    line-height: 80px;
+    color: #000000;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin: 25px;
+    border: 30px;
+    padding: 5px;
+    
+}
+.navBar li a:hover{
+    background-color: #77aad9;
+    border-radius: 10px;
+   
+}
+.navBar h1{
+    line-height: 90px;
+    position: relative;
+    float: left;
+    font-size: 50px;
+    font-style:unset;
+    color: #000000;
+    margin: 5px;
+    border: 15px;
+    padding: 10px;
+    border-style:ridge;
+    border-color: #77aad9;
+    font-weight:900;
+    text-decoration: underline; 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #fad3d6;
+    font-size: 25px;
+    font-weight:900;
+}
+.logIn{
+    width: 400px;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #77aad9;
+    border-radius: 20px;
+}
+.logIn input[type = "text"], .logIn input[type = "password"]{
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    font-weight:900;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px solid #fad3d6;
+    padding: 14px 10px;
+    width: 275px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.logIn h2{
+   text-transform: uppercase;
+   font-weight: 900; 
+}
+.logIn input[type = "submit"]{
+    border: 0;
+    background: none;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid #fad3d6;
+    padding: 10px 14px;
+    width: 200px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 20px;
+}
+.logIn input[type = "submit"]:hover{
+    cursor: pointer;
+}
+.signUp{
+    display: block;
+    width: 400px;
+    height: 220px;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    top: 900px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #77aad9;
+    border-radius: 20px; 
+    font-size: 20px;
+}
+.signUp h2{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.signUp button{
+    border: 0;
+    background: none;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid #fad3d6;
+    padding: 10px 14px;
+    width: 200px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 20px;
+}
+.signUp button:hover{
+    cursor: pointer;
+}
+
+
+footer{
+    position: absolute;
+    top: 1600px;
+    width: 98.52%;
+    height: 2.5rem;
+    background: #4d4949;
+    color: rgb(255, 255, 255);
+    height: 150px;
+    padding-left: 18px;
+    border-radius: 0px;
+    border: 5px solid #000000;
+}
+.emailAd{
+    display: block;
+    float: right;
+    margin: 50px;
+    border: 20px;
+    padding: 1px;
+}
+.emailAd a{
+    color: turquoise;
+}
+.copyright{
+    display: block;
+    float: left;
+    margin: 50px;
+    border: 20px;
+    padding: 1px;
+}
+footer h4{
+    display: block;
+    float: left;
+    margin: 50px;
+    border: 20px;
+    padding: 1px;
+}
