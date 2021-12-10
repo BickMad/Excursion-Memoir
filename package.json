@@ -1,0 +1,23 @@
+{
+  "name": "excursion-memoir-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BickMad/Excursion-Memoir.git"
+  },
+  "author": "Zachary Bickmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BickMad/Excursion-Memoir/issues"
+  },
+  "homepage": "https://github.com/BickMad/Excursion-Memoir#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
