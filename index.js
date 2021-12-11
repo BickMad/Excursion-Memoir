@@ -29,12 +29,7 @@ app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
     res.render("index");
-    if (request.session.loggedin) {
-		response.send('Welcome back, ' + request.session.username + '!');
-	} else {
-		response.send('Please login to view this page!');
-	}
-	response.end();
+    
 });
 
 app.get("/displayPage", (req, res) => {
