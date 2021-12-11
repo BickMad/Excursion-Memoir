@@ -18,9 +18,13 @@
   "homepage": "https://github.com/BickMad/Excursion-Memoir#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
-    "mysql": "^2.18.1"
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "prohairesis": "^1.2.5"
   }
 }
