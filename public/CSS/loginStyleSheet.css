@@ -75,7 +75,7 @@ body{
     background: #77aad9;
     border-radius: 20px;
 }
-.logIn input[type = "text"], .logIn input[type = "password"]{
+.logIn #Username, #Password{
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
     font-weight:900;
