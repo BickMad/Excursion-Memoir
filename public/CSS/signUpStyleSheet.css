@@ -110,6 +110,29 @@ body{
 .signUp button[type = "submit"]:hover{
     cursor: pointer;
 }
+
+#loginA{
+    
+    display: block;
+    position: absolute;
+    top: 72%;
+    left: 47%;
+    border: 1;
+    background:  #fad3d6;
+    margin: 20px;
+    text-align: center;
+    border: 5px solid #77aad9;
+    padding: 14px;
+    width: auto;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 20px;
+}
+
+
+
 footer{
     position: absolute;
     top: 1600px;

@@ -16,17 +16,28 @@ app.get("/displayPage", (req, res) => {
     res.render("displayPage");
 });
 
-app.get("/login", (req, res) => {
-    res.render("login");
-});
-
 app.get("/newEntry", (req, res) => {
     res.render("newEntry");
 });
 
+
+
+
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+
+
 app.get("/signUp", (req, res) => {
     res.render("signUp");
 });
+app.post('/signUp', (req, res) =>{
+
+});
+
+
+
 
 
 const PORT = process.env.PORT || 3000;
