@@ -107,9 +107,28 @@ body{
     transition: 0.25s;
     font-size: 20px;
 }
-.signUp input[type = "submit"]:hover{
+.signUp button[type = "submit"]:hover{
     cursor: pointer;
 }
+
+.signUp button{
+    border: 0;
+    background: none;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid #fad3d6;
+    padding: 10px 14px;
+    width: 200px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 20px;
+}
+
+
+
+
 footer{
     position: absolute;
     top: 1600px;
