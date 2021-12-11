@@ -96,7 +96,7 @@ body{
    text-transform: uppercase;
    font-weight: 900; 
 }
-.logIn input[type = "submit"]{
+.logIn button[type = "submit"]{
     border: 0;
     background: none;
     margin: 20px;
@@ -110,7 +110,7 @@ body{
     transition: 0.25s;
     font-size: 20px;
 }
-.logIn input[type = "submit"]:hover{
+.logIn button[type = "submit"]:hover{
     cursor: pointer;
 }
 .signUp{

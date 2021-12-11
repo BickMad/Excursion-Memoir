@@ -93,7 +93,7 @@ body{
     transition: 0.25s;
 }
 
-.signUp input[type = "submit"]{
+.signUp button[type = "submit"]{
     border: 0;
     background: none;
     margin: 20px;
@@ -107,7 +107,7 @@ body{
     transition: 0.25s;
     font-size: 20px;
 }
-.signUp input[type = "submit"]:hover{
+.signUp button[type = "submit"]:hover{
     cursor: pointer;
 }
 footer{
