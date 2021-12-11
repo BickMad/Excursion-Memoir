@@ -1,15 +1,12 @@
 const express = require("express");
 const ejs = require("ejs");
-var mysql = require("mysql");
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const { Prohairesis } = require("prohairesis");
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'Halothane2214$',
-	database : 'nodelogin'
-});
+const mySQLString = '//be9a5bccf971a1:0a408364@us-cdbr-east-05.cleardb.net/heroku_c50927f03878efc?reconnect=true';
+const database = new Prohairesis(mySQLString);
+
 
 const app = express();
 
@@ -48,9 +45,14 @@ app.post('/login', (req, res) =>{
 app.get("/signUp", (req, res) => {
     res.render("signUp");
 });
-app.post('/signUp', (req, res) =>{
-    console.log(req.body);
-});
+app.post('/signUp', async (req, res) =>{
+    const body = req.body;
+    await database.execute('INSERT INTO user (Username, Password) VALUES(@Username, @Password, NOW())', {
+        Username: body.Username,
+        Password: body.Username
+    })
+    res.send('added user');
+})
 
 
 
