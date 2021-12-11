@@ -29,7 +29,6 @@ app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
     res.render("index");
-    
 });
 
 app.get("/displayPage", (req, res) => {
@@ -46,15 +45,16 @@ app.get("/newEntry", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login");
 });
+
 app.post('/login', function(request, response) {
-	var username = request.body.Username;
-	var password = request.body.Password;
+	var username = request.body.username;
+	var password = request.body.password;
 	if (username && password) {
 		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
 			if (results.length > 0) {
 				request.session.loggedin = true;
 				request.session.username = username;
-				response.redirect('/');
+				response.redirect('/home');
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
