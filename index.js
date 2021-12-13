@@ -56,23 +56,17 @@ app.get("/login", (req, res) => {
     res.render("login");
 });
 app.post('/login', (req, res) =>{
-    
     var Username = req.body.Username;
-    var Password = req.body.Password
-    db.query(
-    "SELECT * FROM user WHERE Username = ? AND Password = ?",
-    [Username, Password],
-     (err, result) => {
-         if (err) {
-             res.redirect('/login')
-         }
-        if(result){
-            res.redirect('/displayPage')
+    var Password = req.body.Password;
+
+    db.query("SELECT * FROM user WHERE Username = ? AND Password = ?", [Username, Password], function(error, results, fields){
+        if(results.length > 0) {
+            res.redirect("/displayPage");
         } else {
-             res.redirect('/login')
-         }
-     }
-     );
+            res.redirect("/");
+        }
+        res.end();
+    })
      
 });
 
