@@ -5,9 +5,25 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const { Prohairesis } = require("prohairesis");
 const env = require('./env');
+mysql = require('mysql');
+
+const db = mysql.createConnection({
+host: 'us-cdbr-east-05.cleardb.net',
+user: 'be9a5bccf971a1',
+password: '0a408364',
+database: 'heroku_c50927f03878efc'
+});
+
+db.connect((err) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log(`Successful connected to the DB....`);
+    }
+  });
+
 
 const database = new Prohairesis(env.CLEARDB_DATABASE_URL);
-
 
 
 const app = express();
@@ -40,7 +56,24 @@ app.get("/login", (req, res) => {
     res.render("login");
 });
 app.post('/login', (req, res) =>{
-
+    
+    var Username = req.body.Username;
+    var Password = req.body.Password
+    db.query(
+    "SELECT * FROM user WHERE Username = ? AND Password = ?",
+    [Username, Password],
+     (err, result) => {
+         if (err) {
+             res.redirect('/login')
+         }
+        if(result){
+            res.redirect('/displayPage')
+        } else {
+             res.redirect('/login')
+         }
+     }
+     );
+     
 });
 
 
@@ -51,9 +84,9 @@ app.post('/signUp', async (req, res) =>{
     const body = req.body;
     await database.execute('INSERT INTO user (Username, Password) VALUES (@Username, @Password)', {
         Username: body.Username,
-        Password: body.Username
+        Password: body.Password,
     })
-    res.send('added user');
+    
 });
 
 
