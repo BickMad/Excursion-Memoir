@@ -7,7 +7,7 @@ const { Prohairesis } = require("prohairesis");
 const env = require('./env');
 mysql = require('mysql');
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
 host: 'us-cdbr-east-05.cleardb.net',
 user: 'be9a5bccf971a1',
 password: '0a408364',
