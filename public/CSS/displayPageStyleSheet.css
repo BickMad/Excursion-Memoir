@@ -1,3 +1,8 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
 .navBar{
     background: #F1B5B8;
     color: black;
@@ -39,6 +44,7 @@
 .navBar li a:hover{
     background-color: #77aad9;
     border-radius: 10px;
+    cursor: pointer;
    
 }
 .navBar h1{
@@ -57,41 +63,41 @@
     text-decoration: underline; 
 }
 body{
-    margin: 0;
+    margin-bottom: 170px;
     padding: 0;
     font-family: 'Roboto Slab', serif;
     background-color: #fad3d6;
     font-size: 25px;
     font-weight:900;
+
 }
 .displayTable{
-    position: absolute;
-    top: 90%;
-    left: 33%;
-    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 900;
+    clear:both;
+    width: 80%;
     text-align: center;
     list-style: none;
     text-align: center;
     padding: 30px;
     border-radius: 20px;
-    table-layout: fixed;
-    width: 1000px;
+
+   
 }
-.displayTable h1{
-    width: 400px;
-    font-size: 45px;
-    background-color: #fad3d6;
-    border-radius: 20px;
-    border: 3px solid black;
-}
-.displayTable h3{
+
+.displayTable th{
+    display: block;
+    float: left;
     width: 400px;
     font-size: 35px;
     background-color: #fad3d6;
     border-radius: 20px;
     border: 3px solid black;
+    padding: 20px;
+    margin: 20px;
 }
-.displayTable p{
+#userInput{
+    display: block;
     width: 600px;
     height: 175px;
     float: left;
@@ -99,40 +105,33 @@ body{
     background-color: #fad3d6;
     border-radius: 10px;
     border: 3px solid black;
+    padding: 20px;
+    margin: 20px;
 }
 
-.displayTable img{
-    width: 700px;
-    height: auto;
-    display: block;
+img{
+    width: 50%;
+    height: 50%;
     float: right;
-    left: 50%;
-    border-radius: 20px;
-}
-.container{
     display: block;
-    column-count: 2;
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    width: 1000px;
-    height: 1000px;
+    position: relative;
+    padding: 20px;
+    margin: 20px;
 }
 
 .displayTable tr{
+    clear: both;
     background-color: #77aad9;
     display: block;
-    width: 1500px;
-    height: 500px;
+    height: 400px;
     margin: 40px;
     border: 15px;
     padding: 10px;
-    border-collapse: collapse;
-    width: 1500px;
     border-radius: 20px;
 }
 .displayTable button{
     display: block;
-    background-color: #F1B5B8;
+    background-color: #77aad9;
     border-radius: 28px;
     border: solid;
     display: inline-block;
@@ -146,8 +145,132 @@ body{
     border: 3px solid black;
 }
 
+.popContainer{
+    position: fixed;
+    top: 40%;
+    left: 87%;
+    background-color: #77aad9;
+    border: 5px solid #F1B5B8;
+    border-radius: 20px;
+    padding: 20px;
+    display: block;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
 
+.popContainer h1{
+    color: #F1B5B8;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
 
+.button{
+    background: #77aad9;
+    padding: 10px 15px;
+    color: #F1B5B8;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 22px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    margin-top: 25px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.button:hover{
+    background: #fad3d6;
+    color: #77aad9;
+    cursor: pointer;
+}
+
+.popup{
+    z-index: 950;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    height: 400px;
+    width: 500px;
+    background: #F1B5B8;
+    padding: 20px;
+    border-radius: 5px;
+
+    border: solid 5px #77aad9;
+    border-radius: 20px;
+}
+
+#Title{
+    display: block;
+    float: left;
+    font-size: 20px;
+    background-color: #fad3d6;
+    border-radius: 20px;
+    border: 3px solid #77aad9;
+    padding: 10px;
+    margin: 20px;
+}
+#Date{
+    display: block;
+    float: left;
+    font-size: 20px;
+    background-color: #fad3d6;
+    border-radius: 20px;
+    border: 3px solid #77aad9;
+    padding: 10px;
+    margin: 20px;
+}
+#Thoughts{
+    display: block;
+    height: 150px;
+    width: 300px;
+    float: left;
+    font-size: 20px;
+    background-color: #fad3d6;
+    border-radius: 20px;
+    border: 3px solid #77aad9;
+    padding: 10px;
+    margin: 20px;
+}
+
+#popupSubmit{
+    background: #77aad9;
+    padding: 10px 15px;
+    color: #F1B5B8;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-top: 25px;
+    text-decoration: none;
+    float: right;
+}
+
+#popupSubmit:hover{
+    border-radius: 10px;
+    background: #fad3d6;
+    color: #77aad9;
+    cursor: pointer;
+}
+
+.close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: #F1B5B8;
+}
+.close:hover{
+    cursor: pointer;
+}
 
 
 
@@ -155,9 +278,11 @@ body{
 
 
 footer{
+    display: flex;
     position: absolute;
-    top: 1700px;
-    width: 98.52%;
+    left: 0;
+    right: 0;
+    width: 98.52%; 
     height: 2.5rem;
     background: #4d4949;
     color: rgb(255, 255, 255);
@@ -165,6 +290,7 @@ footer{
     padding-left: 18px;
     border-radius: 0px;
     border: 5px solid #000000;
+    bottom: 0;
 }
 .emailAd{
     display: block;

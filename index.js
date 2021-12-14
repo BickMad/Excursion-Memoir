@@ -20,7 +20,7 @@ const database = new Prohairesis(env.CLEARDB_DATABASE_URL);
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json())
 
 app.set("view engine", "ejs");
@@ -38,10 +38,15 @@ app.get("/displayPage", (req, res) => {
 });
 
 app.get("/newEntry", (req, res) => {
-    res.render("newEntry");
+    res.render("displayPage");
 });
-
-
+/*
+app.post("/newEntry", (req, res) => {
+    let Title = req.body.Title;
+    let Date = req.body.Date;
+    let textArea = req.body.testArea;
+});
+*/
 
 
 app.get("/login", (req, res) => {
@@ -53,9 +58,9 @@ app.post('/login', (req, res) =>{
 
     db.query("SELECT * FROM user WHERE Username = ? AND Password = ?", [Username, Password], function(error, results, fields){
         if(results.length > 0) {
-            res.redirect("/displayPage");
-        } else {
             res.redirect("/");
+        } else {
+            res.redirect("/login");
         }
         res.end();
     })
@@ -71,6 +76,7 @@ app.post('/signUp', async (req, res) =>{
         Username: body.Username,
         Password: body.Password,
     })
+    res.redirect("/login");
     
 });
 
@@ -79,4 +85,4 @@ app.post('/signUp', async (req, res) =>{
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log('Server is running on ${port}'));
+app.listen(PORT, () => console.log(`Server is running on ${PORT}`));

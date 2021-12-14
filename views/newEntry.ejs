@@ -27,18 +27,16 @@
         </nav>
     </header>
     
-    <label>
-        <form class="newEntry" action="newEntry.html" method="post">
+        <form class="newEntry" action="/newEntry" method="post">
                 <h2>Add Your First Memory Here!</h2>
                 <h3>Title</h3>
-                <input type="text" name="" placeholder="Enter a Title">
+                <input type="text" id="Title" name="Title" placeholder="Enter a Title">
                 <h3>Date</h3>
-                <input type="text" name="" placeholder="Enter the date">
+                <input type="text" id="Date" name="Date" placeholder="Enter the date">
                 <h3>About Your Travels</h3>
-                <textarea type="textArea" name="textarea" placeholder="Enter your memories here"></textarea>
-                <input type="submit" name="" value="Submit">
-            </form> 
-    </label>
+                <textarea type="textArea" id="textArea" name="textArea" placeholder="Enter your memories here"></textarea>
+                <input type="submit" onclick="handleSubmit()" value="Submit"/>
+        </form> 
         
 
 
@@ -49,6 +47,6 @@
         <p class="copyright">&copy; 2021, Zachary Bickmann <br></p> 
         <p class="emailAd">My email is: <a href="mailto: zbickmann@oakland.edu">zbickmann@oakland.edu</a> </p>
     </footer>
-
+    <script type = "text/javascript" src="../public/js/newEntry.js"></script>
 </body>
 </html>

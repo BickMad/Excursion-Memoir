@@ -26,34 +26,59 @@
         </nav>
     </header>
 
-    <div class="container">
-    <table cellspacing = "0" valign = "middle" class="displayTable">
-        <tr>    
-            <td>
-                <div class="tdDiv">
-                <h1>My First Travel Entry</h1>
-                <h3>Date: 2/14/2018</h3>
-                <p>I went to Zermatt and saw so many amazing things, I want to go back so bad. Thank god I have Excursion Memoir to remember this amazing trip.</p>
-                <a class="Edit" href="HTML/newEntry.html"><button>Edit</button></a>
-                <a class="Delete" href="HTML/newEntry.html"><button>Delete</button></a>
-                </div>
-            </td>
-            <td><img src = "../public/img/Zermatt.jpg" alt = "Zermatt Picture" title="Picture of Zermatt" class="zermattPic" /></td>
-        </tr>
-        <tr>
-            <td>
-                <h1>My First Travel Entry</h1>
-                <h3>Date: 2/14/2019</h3>
-                <p>I went to Vienna and saw so many amazing things, I want to go back so bad. Thank god I have Excursion Memoir to remember this amazing trip.</p>
-                <a class="Edit" href="/newEntry"><button>Edit</button></a>
-                <a class="Delete" href="/newEntry"><button>Delete</button></a>
-                
-            </td>    
-            <td><img src = "../public/img/austriaVienna.jpg" alt = "Vienna Picture" title="Picture of Vienna" class="viennaPic" /></td>
-        </tr>
-    
-    </table>
+    <div class="popContainer">
+        <h1 id="testing">MAKE A NEW ENTRY</h1>
+        <a href="#" class="button" id="button">New Enrty</a>
     </div>
+
+    <div class="popup">
+        <div class="popup-content">
+            <form>
+                <img src="../public/img/Close.png" alt="close" class="close">
+                <input type="text" id="Title" placeholder="Title" required>
+                <input type="text" id="Date" placeholder="Date" required>
+                <textarea type="textArea" id="Thoughts" placeholder="Some Thoughts" required></textarea>
+                <button type="submit" name="" id="popupSubmit" value="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+    
+    <div class="containter">
+        <table class="displayTable" id="mainTable">
+            <tr>
+                <th>Title</th>
+                <th>Date</th> 
+                <td id="userInput">Thoughts on trip: <br> These are my thoughts on this trip, and honestly I don't know how this is going to look.</td>
+                <td><img id="happy" src = "../public/img/HappyFace.png"/> </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <footer>
@@ -61,6 +86,6 @@
         <p class="copyright">&copy; 2021, Zachary Bickmann <br></p> 
         <p class="emailAd">My email is: <a href="mailto: zbickmann@oakland.edu">zbickmann@oakland.edu</a> </p>
     </footer>
-
+    <script src="../public/js/displayPage.js"></script>
 </body>
 </html>
