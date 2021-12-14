@@ -14,14 +14,6 @@ password: '0a408364',
 database: 'heroku_c50927f03878efc'
 });
 
-db.connect((err) => {
-    if (err) {
-      throw err;
-    } else {
-      console.log(`Successful connected to the DB....`);
-    }
-  });
-
 
 const database = new Prohairesis(env.CLEARDB_DATABASE_URL);
 
